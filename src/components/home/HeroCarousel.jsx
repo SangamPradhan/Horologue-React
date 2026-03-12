@@ -127,7 +127,7 @@ const HeroCarousel = () => {
           </div>
 
           {/* Main Layout Container */}
-          <div className="relative z-10 h-full max-w-[1440px] mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center justify-center gap-12 pt-32 pb-16">
+          <div className="relative z-10 h-full max-w-[1440px] mx-auto px-8 md:px-20 flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24 pt-32 pb-24 md:pt-40">
             {/* Content Section */}
             <div className="flex-1 text-center md:text-left">
               <motion.div
@@ -136,27 +136,24 @@ const HeroCarousel = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <p className="font-accent text-xs tracking-[0.5em] uppercase mb-5" style={{ color: slide.accent }}>
+                <p className="font-accent text-xs tracking-[0.5em] uppercase mb-4" style={{ color: slide.accent }}>
                   {slide.brand} — Signature Edition
                 </p>
-                <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-8 uppercase tracking-tighter" style={{ color: slide.textColor }}>
+                <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black leading-[1] mb-6 uppercase tracking-tighter" style={{ color: slide.textColor }}>
                   {slide.tagline} <br />
                   <span className="italic font-serif opacity-50">{slide.highlight}</span>
                 </h1>
-                <p className="text-base md:text-lg mb-10 max-w-lg leading-relaxed font-light" style={{ color: slide.textColor + 'aa' }}>
+                <p className="text-sm md:text-base mb-8 max-w-md leading-relaxed font-light" style={{ color: slide.textColor + 'aa' }}>
                   {slide.subtitle}
                 </p>
                 
-                <div className="flex flex-col sm:flex-row items-center gap-8">
+                <div className="flex justify-center md:justify-start">
                   <Link
                     to="/shop"
-                    className="group relative inline-flex items-center gap-3 px-10 py-4 bg-primary text-background-dark font-black tracking-widest text-xs uppercase transition-transform hover:scale-105"
+                    className="inline-block bg-primary text-background-dark px-8 py-3.5 rounded font-black tracking-[0.15em] text-xs uppercase transition-all hover:brightness-110 hover:scale-105 shadow-lg shadow-primary/20"
                   >
-                    Explore Selection <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Explore the Catalogue
                   </Link>
-                  <button className="text-xs font-black tracking-[0.3em] uppercase border-b border-white/20 hover:border-primary transition-all pb-1" style={{ color: slide.textColor }}>
-                    Technical Details
-                  </button>
                 </div>
               </motion.div>
             </div>
