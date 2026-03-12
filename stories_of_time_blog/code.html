@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eeba2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex flex-col min-h-screen w-full overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-8">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">watch</span>
+<h2 class="text-xl font-extrabold tracking-tighter uppercase">Horológe</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Heritage</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Reviews</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Technical</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Market</a>
+<a class="text-primary text-sm font-semibold uppercase tracking-widest border-b-2 border-primary pb-1" href="#">Vault</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 lg:gap-6">
+<div class="hidden sm:flex items-center bg-primary/10 border border-primary/20 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-primary/60 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-primary/40 w-32 lg:w-48" placeholder="Search the archive..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-primary/20 rounded-lg transition-colors text-primary">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="p-2 hover:bg-primary/20 rounded-lg transition-colors text-primary">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto px-6 lg:px-20 py-12">
+<!-- Header Section -->
+<div class="mb-12">
+<h1 class="text-5xl lg:text-7xl font-black mb-4 tracking-tighter">From the Vault</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl font-light">
+                Curated stories, deep-dives into mechanical mastery, and the cultural heritage of the world's most significant timepieces.
+            </p>
+</div>
+<!-- Featured Story -->
+<section class="mb-20">
+<div class="relative group overflow-hidden rounded-xl bg-primary/5 border border-primary/20 flex flex-col lg:flex-row min-h-[500px]">
+<div class="flex-1 p-8 lg:p-16 flex flex-col justify-center gap-6">
+<div>
+<span class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 block">Featured Story</span>
+<h2 class="text-3xl lg:text-5xl font-bold leading-tight mb-4">The History of the Moonwatch: Beyond Apollo 11</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
+                            Exploring the legacy of the Omega Speedmaster, from its secret selection by NASA to its contemporary evolution as a master chronometer.
+                        </p>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded font-bold uppercase tracking-widest text-sm inline-flex items-center gap-2 transition-all group-hover:gap-4">
+                            Read the Feature
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex-1 relative min-h-[300px] lg:min-h-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury vintage chronograph watch on a dark textured surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUIP_hsnd1xvFtON1MWfwg7HSJvSVlrbq_fbDwcknpDRT0Gx9KeOTrw7O6EhhOwDp5Jq3o3VePCyrFmVO55aLhS0bikeJ-WG4cg0pZ3TWz5q19HPPztdqWEQphbq5pDdcLEVSg0bNIukjVIQSJY4hzy3jRZ9FG3Am-wXhIH922R2zWy7fD1GBEVbDg96ieOx4bOtfcRsy-4MOWkueLOcfqPb0wFweAHDcL0eBfbiKoJdhsPZcGB_aSywS0aMHmADQSaDEY-E-6HFE')"></div>
+</div>
+</div>
+</section>
+<!-- Category Filter -->
+<div class="flex flex-wrap items-center gap-6 mb-12 border-b border-primary/10 pb-6">
+<button class="text-primary font-bold uppercase tracking-widest text-sm border-b-2 border-primary pb-2">All Posts</button>
+<button class="text-slate-500 hover:text-primary font-bold uppercase tracking-widest text-sm transition-colors pb-2">Heritage</button>
+<button class="text-slate-500 hover:text-primary font-bold uppercase tracking-widest text-sm transition-colors pb-2">Reviews</button>
+<button class="text-slate-500 hover:text-primary font-bold uppercase tracking-widest text-sm transition-colors pb-2">Technical</button>
+<button class="text-slate-500 hover:text-primary font-bold uppercase tracking-widest text-sm transition-colors pb-2">Market</button>
+</div>
+<!-- Blog Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mb-24">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a Patek Philippe perpetual calendar watch dial" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhiBEjMQ76DdZPEmJ-f0xwpEaJlFTEagh0J7lxq3WwIUuDDFws6MePaSNmbZUwWJccrGu-kNzpNsbUxxB8DMS0VjNmbSvsLQRkHQG5iFg4F8drMgimgfp5NfYUKKwq4hQRshTO_qqi_QQojOYM4aQeH73DvLsdD38yeTg9tBWsFOTD42f21a2A4mcEHgnkceqFP1k41rO8RAlAgzvt0pndn-YKjNiyaLnLufKS3Z-TzMnQ7zl5T4q-5JXu6MXEXnu-W77KUgld31M')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Heritage</span>
+<span class="text-slate-400 text-xs">Jan 12, 2024</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Patek Philippe 1518: The First Series</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Inside the genesis of the perpetual calendar chronograph that defined an era of watchmaking.</p>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Classic Rolex Submariner diver watch in water environment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNaOeDYIH549cUc7A7n1HXU6DJZ-beDWYJMFZBAFnSJquB_9EBCkLWUjsMrnbFfNp2ruWa7ch4dk6Jqon8ZOARRm65rzyeEGuSmtpaVkXkLiR0Sj268wTeVEjJezlwNFExSb1HBA4Tkte1HT7Wy_zA5oN0npMMa8IdJJ0gS7CAtDOxhaanZjkLJoSPlZy_hMn56eell-ilt5vQhuzW5fWUVAJepm7wGZ6MBD7HSobNRPOinqve7JVGX1BtRyrUeBq8YGjk4TMfuyo')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Reviews</span>
+<span class="text-slate-400 text-xs">Jan 10, 2024</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Rolex Submariner: The Evolution of an Icon</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Tracing the design DNA of the world's most recognizable diving watch over seven decades.</p>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Art deco style luxury rectangular watch with gold finish" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAeFVkYIPlPiJJhIiUQ0zN_2HP39IJgEfXbhHm2ZGKludBnA0c-z8O2SjA1azQQS9eFvZ1c4pXdAnaO_q40CWqIA2osMQ9Fe-3u6qAKR5eSM6lQuiJD6ABhf4WZx-USffPTnElRRn-FeT91UR59BKNOINnJXmGVIiwesJ_t2C73Ou24YDfN6obzPaD0rIt7o3YkMCrWtw6nCwcBBJddPw4FHIX25444U9HJwuImq8w68im6_6_TQpp25JDryDQ11QazybXWcm71GOM')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Heritage</span>
+<span class="text-slate-400 text-xs">Jan 08, 2024</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Art Deco &amp; Cartier: The Tank Normale</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">How geometric purity and jewelry expertise created a timeless wrist-worn masterpiece.</p>
+</div>
+<!-- Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Intricate mechanical watch movement with visible tourbillon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnDGOpBAUK4IpxR4qlC9rOKGylkwVb6-15sMOvXFdlN89NIm3YY8qBpX081FvhEAh4b7PaujLsMyn7nj9E9BjDNp-Nd9yhlIpi5P866TrPybQBsJ1qzz4mVohKdzTUgY5vCVjEWvFUjS9Xozi7wyCib5N2VvBMQ96v9hTHVgwdJzlBCu1Xq-YQbvCTd-hiCCSMu4YnTZWCO371kCMMWDN3v1kpgcDeM2wE37QwzJC4rA1O8Z1UHKjjTdghEBI6nd_h2xJZcofCa7o')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Technical</span>
+<span class="text-slate-400 text-xs">Jan 05, 2024</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Understanding the Flying Tourbillon</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Demystifying one of high watchmaking's most complex and visually stunning complications.</p>
+</div>
+<!-- Card 5 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Elegant Japanese luxury watch with textured dial" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_p4JH2wShINn7jBF1vryiwg67YDm7_n13o5ob0YjpwtT1ZKfdxkhusuMYYxDHfKTaC2Fi3Bgga99gUywuh-20-35TRhmocR9EBa0O-33U4pXbxr--DTlel6FwuSvPAlg6dFqGf8G7kK-3SWY5An2693w9Ouia0xAiWMZutRaHi7wnTo8mqbxwgG_m92hHMH_DtX7BgJ8TVFb6LyloAO1hADZFIKuS6U2sKL6XZmTXPuRRgRhM67DXtFbud2d4J_byj2HPd60jZl4')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Reviews</span>
+<span class="text-slate-400 text-xs">Jan 02, 2024</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Seiko's Grand Design Philosophy</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Exploring 'The Grammar of Design' and the relentless pursuit of precision in Shizukuishi.</p>
+</div>
+<!-- Card 6 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Brushed steel octagonal luxury watch with integrated bracelet" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAmPkipBK0xDXZmlZN495Jg5fx2tNjB_IdFbmlpDD82JaN185OuZwat_Cou0-btMYsEk3w1fu0IUtcoXLR0fmMsZgWX0tcd5HD6FG7k-MngsEwR0tRA3gvwnsqSRyjElLxc6HbQr5Me0SZ4xFalbz1ywW0vqN6G9x25yL9RrHlCcI_2hexi0arQETOazHVz6rPxq_VJ07lKyCUCdlP7yX5OkFEYL1GlUZs_nN6msD7X_X2-RbDORAd58ob1_SaEntvm8A0iFWFnH0')"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Heritage</span>
+<span class="text-slate-400 text-xs">Dec 28, 2023</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Royal Oak Legacy</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">How Gérald Genta's overnight sketch saved Audemars Piguet and birthed the luxury sports watch.</p>
+</div>
+</div>
+<!-- Newsletter Section -->
+<section class="mb-24 relative overflow-hidden rounded-xl bg-background-light dark:bg-primary/5 border-2 border-primary/20 p-12 lg:p-20 flex flex-col items-center text-center">
+<div class="relative z-10 max-w-2xl">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">mail</span>
+<h2 class="text-3xl lg:text-4xl font-bold mb-4">Join the Collector's Circle</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-lg">
+                    Receive exclusive auction alerts, technical deep-dives, and early access to "From the Vault" long-form features.
+                </p>
+<div class="flex flex-col sm:flex-row w-full gap-4 max-w-lg mx-auto">
+<input class="flex-1 bg-white dark:bg-background-dark border border-primary/30 rounded px-4 py-4 focus:ring-primary focus:border-primary" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-background-dark font-bold uppercase tracking-widest px-8 py-4 rounded hover:bg-primary/90 transition-colors whitespace-nowrap">Subscribe</button>
+</div>
+<p class="mt-6 text-[10px] uppercase tracking-widest text-slate-500">Respecting your privacy since 2012. Weekly dispatch only.</p>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+</section>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mb-24">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-primary/20 text-primary hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded bg-primary text-background-dark font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-primary/20 hover:bg-primary/10 transition-all font-bold">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-primary/20 hover:bg-primary/10 transition-all font-bold">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-primary/20 hover:bg-primary/10 transition-all font-bold">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-primary/20 text-primary hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-primary/10 px-6 lg:px-20 py-20 text-slate-400">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">watch</span>
+<h2 class="text-lg font-extrabold tracking-tighter uppercase">Horológe</h2>
+</div>
+<p class="text-sm leading-relaxed mb-6">The definitive voice in modern horology and vintage timepiece collection.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Archive</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">By Year</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">By Complication</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">By Manufacture</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Editor's Choice</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Resources</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Market Reports</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Valuation Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Movement Database</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Glossary</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Company</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contributors</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Advertising</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-primary/5 mt-20 pt-8 flex flex-col md:flex-row justify-between text-xs uppercase tracking-widest opacity-50">
+<p>© 2024 Horológe Vault. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

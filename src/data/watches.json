@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "brand": "Rolex",
+    "name": "Submariner Date",
+    "price": 14500,
+    "popular": true,
+    "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuB0fEv3pWN7Wdr5eef0nw09_cnIwRkhmqv9XNXL9hO9FTfWreUKnwQf9T72tojT3lPdF6UeubWMRSNFxNbLh4tSXEyG4yhTmL8mjS83tXwgO5Pa60LEeXGaDi6kDUsFKsOOQHX0i2gMjt5ztkTkw3gyao2DxkRRHHGp-xJE4YQxawhJ9cWAOCwrP_EhfMpB0wT8ZqHRFNd-ud537M7aDI_CWZpFQsdi51HteAEsDjSPy-DjZ7CK87Vj1M6un5i-h8_zB89dNT2PhmY"],
+    "caseSize": "41mm",
+    "movement": "Automatic",
+    "waterResistance": "300m",
+    "caseMaterial": "Oystersteel"
+  },
+  {
+    "id": "2",
+    "brand": "Rolex",
+    "name": "Cosmograph Daytona",
+    "price": 34500,
+    "popular": true,
+    "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuA-yHadc88tjsR4LchGka-s0Wz43bpql706gtBSV8Mujk7l0hpeFpyu7iGzIUDMLtpFAxQrzDqTIRYuDDqm4io8VQwJYFKYyvVSajKOsNN0xFd6QXN3_Sul0wXwHrMw_tFJ25JhESujOW65J_NfbrbfY0EwDfpVhei_Vb7m06Z9vgywsC3EFlG4Qx1zudf0EtnAzdGBUvLV8jbINRu79Uv9Dg0H1PDsNJ7LTgMTIp9-gs-_T5HDJDefcmmCloxng1NQxTSO3FDJWDc"],
+    "caseSize": "40mm",
+    "movement": "Automatic",
+    "waterResistance": "100m",
+    "caseMaterial": "18ct Yellow Gold"
+  },
+  {
+    "id": "3",
+    "brand": "Cartier",
+    "name": "Santos de Cartier",
+    "price": 28900,
+    "popular": true,
+    "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuD2ttA9AeCMahX_Czb8gNpB19RvjbZtNGUzytQgxjVNivQzhpY9lhQZtbn1CSmeCZT-TfISKY0BHaB-m6mz5EFJJ1JNrLanIEHT0aaC6e2HuM4PmjGMLOfLI4r5Unaw-XCemsu-QnmhdARd2zFmcQ_nAH1riPySn4yZPdfshTSWEHqWruv6Z-scdTq9GhRc99EV_tAEutJShr8PTZ9b3rc6fwi3Gj0Ui8-LmA2_AoZbbc2T5Es0gzSODNsJV_7ul0i6AJk04Gz1ijM"],
+    "caseSize": "39.8mm",
+    "movement": "Automatic",
+    "waterResistance": "100m",
+    "caseMaterial": "ADLC & Steel"
+  },
+  {
+    "id": "4",
+    "brand": "Cartier",
+    "name": "Tank Française",
+    "price": 32500,
+    "popular": true,
+    "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuBp6SMyreVdmvYrqO0SLeY-aOlGtnlWdHXoqzV06sxSsDXBzLBWy2kVvGLDT8dx3VFcgOVrpKigTxTkVPsU6TsloCDPA3n39CFi6XHixvgToox5C18_1KdQNNn6qhUtlwJ47r1Gi0Me8IXAV7t26BP3ku7ijwdO4BLdu03CJ1xJpuPxtq_d0UQ6P2P4xZAT9_K7mSMkUnlc7JI9H_hehCjgT4mBspcn54e-MN9hGw08jpa9d6tvPiGUK9eR_N5dnxNUor48zMc30Ug"],
+    "caseSize": "36.7mm x 30.5mm",
+    "movement": "Quartz",
+    "waterResistance": "30m",
+    "caseMaterial": "18ct Yellow Gold"
+  }
+]

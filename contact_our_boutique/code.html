@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eeba2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<title>Contact Us | HOROLÓGE</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-primary/20 px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">watch</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-extrabold leading-tight tracking-widest uppercase">HOROLÓGE</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Boutiques</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#">Contact</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded bg-slate-100 dark:bg-primary/10 text-slate-900 dark:text-primary h-10 w-10 hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="flex items-center justify-center rounded bg-slate-100 dark:bg-primary/10 text-slate-900 dark:text-primary h-10 w-10 hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-20 py-12">
+<!-- Page Title -->
+<div class="mb-16">
+<h1 class="text-slate-900 dark:text-white text-5xl md:text-6xl font-black leading-tight tracking-tight mb-4">Contact Us</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl font-light">
+                        Experience the pinnacle of Swiss craftsmanship. Our concierge is dedicated to providing you with a seamless and personalized experience.
+                    </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Left: Contact Details -->
+<div class="space-y-12">
+<section>
+<h2 class="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-8">Boutique Concierge</h2>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Address</p>
+<p class="text-slate-900 dark:text-slate-200 text-lg">123 Avenue de l'Horlogerie<br/>Geneva, 1201 Switzerland</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Phone</p>
+<p class="text-slate-900 dark:text-slate-200 text-lg">+41 22 555 0199</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Email</p>
+<p class="text-slate-900 dark:text-slate-200 text-lg">concierge@horologe.com</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social links -->
+<section>
+<h2 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-widest mb-6">Connect with us</h2>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded border border-slate-200 dark:border-primary/20 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-12 h-12 rounded border border-slate-200 dark:border-primary/20 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-12 h-12 rounded border border-slate-200 dark:border-primary/20 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded border border-slate-200 dark:border-primary/20 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</section>
+</div>
+<!-- Right: Elegant Contact Form -->
+<div class="bg-slate-50 dark:bg-[#2a2416] p-8 md:p-10 rounded-xl border border-slate-200 dark:border-primary/10 shadow-2xl">
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">First Name</label>
+<input class="w-full bg-background-light dark:bg-background-dark border-slate-200 dark:border-primary/20 rounded-lg p-3 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Last Name</label>
+<input class="w-full bg-background-light dark:bg-background-dark border-slate-200 dark:border-primary/20 rounded-lg p-3 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Email Address</label>
+<input class="w-full bg-background-light dark:bg-background-dark border-slate-200 dark:border-primary/20 rounded-lg p-3 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Subject</label>
+<select class="w-full bg-background-light dark:bg-background-dark border-slate-200 dark:border-primary/20 rounded-lg p-3 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none cursor-pointer">
+<option value="inquiry">General Inquiry</option>
+<option value="service">Technical Service</option>
+<option value="partnership">Partnership Request</option>
+<option value="vip">VIP Viewing</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Message</label>
+<textarea class="w-full bg-background-light dark:bg-background-dark border-slate-200 dark:border-primary/20 rounded-lg p-3 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-bold uppercase tracking-[0.2em] py-4 rounded-lg transition-all shadow-lg active:scale-[0.98]" type="submit">
+                                Send Inquiry
+                            </button>
+</form>
+</div>
+</div>
+<!-- Map Section -->
+<div class="mt-24 rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-primary/10 pointer-events-none mix-blend-color group-hover:bg-transparent transition-colors duration-500"></div>
+<div class="h-96 w-full bg-slate-200 dark:bg-primary/5 relative grayscale-[0.8] brightness-[0.7] contrast-[1.2]">
+<img alt="Map of Geneva boutique location" class="w-full h-full object-cover" data-alt="Dark aesthetic topographic map of Geneva Switzerland" data-location="Geneva" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5tY8ITx-T6Td5LzXmi_JQNiO73X8DuzUykQoF0jNKGTNUUpA4SP3kt3Z8iElQMg1i1Npf5mJ1ErVOYCDoRlJOuPvNEHBKhLDCUfQxRbpOub1QAnjQzBc2xBIJjIbQcrc-BXmFzFh-i9ad57zK4Xp62LdiLSWNLNw7gvV9HkE_KVXN5Wph3ODeibEei6DOm7F4dqTN4N4FZ1l7tndix7ovPAat-HvCnJ4f4ezVB6C-E_x8EfO3rtKNGDVSGzxBmUScmABq2d_nEaE"/>
+<!-- Map Pin Overlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="relative">
+<div class="absolute inset-0 animate-ping rounded-full bg-primary/40 h-12 w-12 -m-2"></div>
+<div class="bg-background-dark text-primary p-2 rounded-full border-2 border-primary shadow-xl z-10 relative">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+</div>
+<div class="mt-4 bg-background-dark/90 backdrop-blur-md px-4 py-2 rounded-lg border border-primary/30 text-xs font-bold uppercase tracking-widest text-primary shadow-2xl">
+                                HOROLÓGE HQ
+                            </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="bg-background-light dark:bg-[#1a160d] border-t border-slate-200 dark:border-primary/10 py-10 px-6 md:px-20 mt-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">watch</span>
+<span class="text-sm font-bold tracking-widest uppercase">HOROLÓGE</span>
+</div>
+<p class="text-slate-500 text-xs font-medium">© 2024 HOROLÓGE SA. All Rights Reserved. Swiss Made Excellence.</p>
+<div class="flex gap-6 text-xs text-slate-500 font-bold uppercase tracking-tighter">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

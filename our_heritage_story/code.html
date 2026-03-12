@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eeba2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .timeline-line {
+            background: linear-gradient(to bottom, transparent, #eeba2b, transparent);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<h2 class="text-xl font-extrabold tracking-tighter uppercase">Horológe</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Collections</a>
+<a class="text-sm font-semibold text-primary transition-colors uppercase tracking-widest" href="#">Heritage</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Philosophy</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Team</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="bg-primary text-background-dark px-5 py-2 text-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all">
+                    Boutique
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img alt="Intricate mechanical watch movement gears" class="w-full h-full object-cover" data-alt="Intricate golden mechanical watch movement components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDblvADbn-evbx78iZZdr8f5WYYYvRK9gg0K3xZuW95wWBLCXBPPYRGi3TTvL2NqbispXkujW5ldYkpvCNwR97l-aLCnayTR95iS4t49CVdQHS0zEJ941D_vYAebJsxDR5axlEBbwqcbSDEawQnbAsddCB9PsG5LJliTiVtChQ6s4AFpTm0TJdehcTm8XaTHYfO_-t6tNmHfKEsSkmRCv2-xaDXX5D0fE__7lbCXOhUbZ0lhBJuuZVlUvl0OQbhRy5PUfdW8VHJ3LY"/>
+</div>
+<div class="relative z-20 text-center px-6 max-w-4xl">
+<span class="text-primary font-bold uppercase tracking-[0.4em] mb-6 block text-sm">Established 1924</span>
+<h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-8">A Century of Craftsmanship</h1>
+<p class="text-lg md:text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
+                    Tracing the evolution of time through precision engineering and the pursuit of horological perfection for one hundred years.
+                </p>
+<div class="mt-12">
+<span class="material-symbols-outlined text-white animate-bounce text-4xl font-extralight">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl">
+<img alt="Person assembling a luxury watch" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Close up of a master watchmaker working on a tiny dial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf79RFi0pZglyRSTKB9JXKbq3OAY6GmwxGwNtPhx0bxaP5ylmoVbNc7FBVjeuPOtOsJXy997ap3MoxUzotfNNqBfhUcN-1g6tgM8mhqjiD3UjjSbB4sy7n1Vs1ZqbsMpLdtHRZPtphmaH46XDT_pdnxpq_vki_sK5-CWfdkCJ8zHDNCxCgMi02ZmcVIol1jvxGHMZcpKZ0uYBaDFQpdTJBuMVBEtc7YvUrlmU5-GOY3FSDiEAXTniq6uPwz0ix60-P9BflDkaXUUU"/>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">Our Essence</h2>
+<h3 class="text-4xl md:text-6xl font-bold leading-tight mb-8">The Art of <br/><span class="italic font-light">Timekeeping</span></h3>
+<div class="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+<p>At Horológe, we believe time is not merely a measurement, but a canvas for artistic expression. Every component is hand-finished, every movement is a symphony of physics and aesthetics.</p>
+<p>Our philosophy is rooted in the "Golden Ratio" of Swiss watchmaking—balancing tradition with the avant-garde to create pieces that transcend generations.</p>
+</div>
+<div class="mt-10 border-l-2 border-primary pl-6 italic text-xl font-light">
+                        "Precision is our minimum standard. Beauty is our ultimate goal."
+                    </div>
+</div>
+</div>
+</section>
+<!-- Heritage Timeline -->
+<section class="bg-slate-100 dark:bg-background-dark/50 py-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold mb-4">Our Heritage</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-1/2 -translate-x-1/2 h-full w-[1px] timeline-line hidden md:block"></div>
+<div class="space-y-24">
+<!-- 1924 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between">
+<div class="md:w-5/12 text-center md:text-right mb-8 md:mb-0">
+<h4 class="text-6xl font-black text-primary/20 mb-2">1924</h4>
+<h5 class="text-2xl font-bold mb-3">Founded in Geneva</h5>
+<p class="text-slate-500">Master watchmaker Henri Laurent opens the first Horológe atelier on the banks of Lake Geneva.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-10 border-4 border-background-dark hidden md:block"></div>
+<div class="md:w-5/12">
+<img alt="Vintage watch workshop" class="rounded-xl shadow-2xl opacity-80" data-alt="A black and white photo of a classic watchmaker's bench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWSZ9z4WvnXVivTDVdpGMSxr5IazZVu5YtRkGfdlQ6FHdZPuZakyenyRCxL-QtW7wfPy2ALVzh2y1b7TTSRG_SYtCvvwVQTe05CnaZmE0mPuO1TPa-dEal02azC6BXS8lWbsi3zNm1WVcIE-QEAJm62qZ38tuKTJT-xcCsNhBW8DZht5gpkZals1Q2gE6Q7atbArLBneg40OehM5XRmZXXd6qAUC1rSaaB_UIzIfIeCm6SSSgwc1TDRFt8o5SYZZ2mPGR2cdcjnLo"/>
+</div>
+</div>
+<!-- 1952 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between">
+<div class="md:w-5/12 text-center md:text-left mb-8 md:mb-0">
+<h4 class="text-6xl font-black text-primary/20 mb-2">1952</h4>
+<h5 class="text-2xl font-bold mb-3">Chronometer Patent</h5>
+<p class="text-slate-500">Introduction of the revolutionary H-1 movement, setting new global standards for magnetic resistance.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-10 border-4 border-background-dark hidden md:block"></div>
+<div class="md:w-5/12">
+<img alt="Patent blueprint of watch" class="rounded-xl shadow-2xl opacity-80" data-alt="A vintage blueprint of a complicated watch movement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTbZ2TrsOYqO2tYdv8Ru5VOmO6dzRoUW0YtTp2MzBa4qouFPZYC0hxdHSRdduKk_xyJpfgQFrbTRmqHWRBoKQqOpY25jCnYVCE4GIdnL_nGbw1tpNn-w7bkdTJFxYngTeeJKaoykRQ0Z104s8bT13QTycxxSM4t7cHae2htyb1nPp1RCe9mpGpcYdm7jhj6gm1gYBO2knhB36w8oiaZsM33hMckEsbfCZGHbPD1Ub9MPIb15dAEJcxZ5HUm1fWFbgUKUVcfkUKsHM"/>
+</div>
+</div>
+<!-- 1988 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between">
+<div class="md:w-5/12 text-center md:text-right mb-8 md:mb-0">
+<h4 class="text-6xl font-black text-primary/20 mb-2">1988</h4>
+<h5 class="text-2xl font-bold mb-3">Global Expansion</h5>
+<p class="text-slate-500">Horológe opens flagship boutiques in Paris, New York, and Tokyo, becoming a symbol of global luxury.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-10 border-4 border-background-dark hidden md:block"></div>
+<div class="md:w-5/12">
+<img alt="Modern luxury boutique" class="rounded-xl shadow-2xl opacity-80" data-alt="A wide shot of a modern city at night with city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLE_Akj6R5dAwILfJnZLhdJfT2XEhKxdWbUoZWILZi3j-cMFcTvtOQ_V1jrlq86hEgr-IS0poZZj7FNDJ9-0nuHMAtua3eHzi_BK4TtRiFxth4C5DR5AcJrvYnXETuGAE866N8-q_itfd_0nGg9nkADX6CGcy85qMRJrHyUGdaMCJ6DvkLNJIVbk9CyAJT4MxC7Pk2jbz2PBus9Wa72ryReMlVcP9AxANiH8Nn0wsF41RiSbbkrPKMc58gAAI-IIvENKhCdP3KYu0"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">The Masters</h2>
+<h3 class="text-4xl font-bold">Behind Every Tick</h3>
+</div>
+<p class="text-slate-500 max-w-xs md:text-right">A curated team of the world's most skilled horologists, dedicated to the preservation of manual craft.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Member 1 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-square rounded-xl">
+<img alt="Master Horologist Portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Portrait of a distinguished man wearing a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZfrRvwJANLP3tnm-eSKkFVWKQVXDALT20A0aCVchoxcEmqzDmyXpEYzyJWNFIGfBoP6dC0Av8WGXV0POFCsjNhkUAoURaDd7CKPRXg45iPJ8wNfw5WPaIFw6lHUiOtzvbAVbtCaVhyWMSVpVVx95GgQFe2cAeDtZZEsDl5_RTuTU8_yOFcqdOVic_J-WtTwZt850UWVv3ucKJWYOjyz7KWLpk9E-K9JXCACJjIbKnsXOcl3ToFKqQtUwnOqps0fCTocmk6Y9zXc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">link</span>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">mail</span>
+</div>
+</div>
+</div>
+<h4 class="text-xl font-bold mb-1">Dr. Julian Vance</h4>
+<p class="text-primary text-sm font-bold uppercase tracking-widest mb-3">Head of Complications</p>
+<p class="text-slate-500 text-sm leading-relaxed">With 35 years of experience, Julian oversees the development of our Perpetual Calendar movements.</p>
+</div>
+<!-- Member 2 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-square rounded-xl">
+<img alt="Female Watch Designer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Portrait of a professional woman in a creative studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfG4qrtpb18DLwfYXsGRxsjyUGBQuALs93WMUErDMHQtnI8NgQD_ZdaDpDraKdvN3y6JmoP96mpB5nVXUCN7ESqzPDfwphKkcc3rcltBs6cKsnYAC5n_Dp7Mbt3gOkbNcJRaJOKbaTZxyQ5M9sOI0uF0-N1bUoEldH96drBFbHbYT1y1dha1u1Hrjffk2h-BpxiPZDKFrOBnqOJxsFYbEX-WfsPqebF2uI1JSGFkReziy6Fb3Rgv_3bCgvJIk5QSxuuEU5ltLprPQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">link</span>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">mail</span>
+</div>
+</div>
+</div>
+<h4 class="text-xl font-bold mb-1">Elena Moretti</h4>
+<p class="text-primary text-sm font-bold uppercase tracking-widest mb-3">Lead Case Designer</p>
+<p class="text-slate-500 text-sm leading-relaxed">An architect turned horologist, Elena defines the aesthetic language of our modern collections.</p>
+</div>
+<!-- Member 3 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-square rounded-xl">
+<img alt="Finishing Specialist" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Portrait of a young artisan in a workshop setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyyTnG0_E3i-7LpHYPILWC2kaepTtS8xnHH0cSRjgFH5KWRLmP6s2wK3ah4I9lvPeLiV5rYjfmhstoyjC1syl5LEE8UjOpSZTKouWtjA98fZQhKG48sBMqo7NQfS88bt1qjvfZ3vu1gooka6i14ibLGBStJFkMU4F4QeIGpSgAsuqrwn-rZwyOUEK4zsO93ApwiBRtncUXXB-rWdAXKxeciusm-cNWJodFus547G4VFQV90rT66R3NLt61fUJgHQ3WoVynpqiyduE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">link</span>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">mail</span>
+</div>
+</div>
+</div>
+<h4 class="text-xl font-bold mb-1">Marcus Thorne</h4>
+<p class="text-primary text-sm font-bold uppercase tracking-widest mb-3">Master Polisher</p>
+<p class="text-slate-500 text-sm leading-relaxed">Specializing in 'black polishing', Marcus ensures every surface reflects perfection before assembly.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary py-20 px-6 text-center text-background-dark">
+<h2 class="text-3xl md:text-5xl font-black mb-8">Own a Piece of History</h2>
+<p class="max-w-2xl mx-auto mb-10 text-lg font-medium opacity-90">Discover our Centennial Collection, a tribute to a century of horological innovation.</p>
+<button class="bg-background-dark text-white px-10 py-4 font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform">
+                Explore The Collection
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-16 px-6">
+<div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">precision_manufacturing</span>
+<h2 class="text-2xl font-extrabold tracking-tighter uppercase">Horológe</h2>
+</div>
+<p class="text-slate-400 max-w-sm leading-relaxed mb-8">Since 1924, crafting timeless mechanical instruments for the discerning individual.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">public</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">chat_bubble</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">photo_camera</span>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Explore</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Watchmaking</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">News</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Services</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Restoration</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Authentication</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Boutique</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Warranty</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between text-slate-500 text-xs tracking-widest uppercase">
+<p>© 2024 Horológe SA. All Rights Reserved.</p>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="hover:text-white" href="#">Privacy Policy</a>
+<a class="hover:text-white" href="#">Terms of Sale</a>
+</div>
+</div>
+</footer>
+</body></html>

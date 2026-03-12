@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HOROLÓGE | Masterpieces of Time</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eeba2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Cormorant Garamond", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* 3D Brand Carousel Styles */
+        .carousel-3d-container {
+            perspective: 2000px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-3d-inner {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: rotate 30s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        .carousel-3d-item {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            left: 10px;
+            top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+        }
+        /* Positions for 5 items */
+        .item-1 { transform: rotateY(0deg) translateZ(350px); }
+        .item-2 { transform: rotateY(72deg) translateZ(350px); }
+        .item-3 { transform: rotateY(144deg) translateZ(350px); }
+        .item-4 { transform: rotateY(216deg) translateZ(350px); }
+        .item-5 { transform: rotateY(288deg) translateZ(350px); }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .morph-transition {
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Sticky Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<h1 class="text-2xl font-extrabold tracking-tighter text-slate-900 dark:text-white">HOROLÓGE</h1>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold tracking-widest uppercase hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-sm font-semibold tracking-widest uppercase hover:text-primary transition-colors" href="#">Pre-Owned</a>
+<a class="text-sm font-semibold tracking-widest uppercase hover:text-primary transition-colors" href="#">Journal</a>
+<a class="text-sm font-semibold tracking-widest uppercase hover:text-primary transition-colors" href="#">Boutiques</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-all">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-all relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-[10px] text-background-dark font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-all">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/20">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoLzMnyKTqXlr8ROV17v6IBww1qoeXpOrATmWyKrscaHNG1NZgmZoqVT0vU5c-rYuKsXOMOvsNNRyAYoDAI_BEcHdGJ3GiyfX28JqiZtAJmfFUlbd0tZtBsyBAf5-KZWhdEHJxKH0-la73qC5ofST1WQ01FZ-0cVQ57y-OMKw7ypcEk02bclSbAj8_wd8x43BKN41-cDui_GM3Ah_BF6bAALTgX1eX_IcN6LjsRDk0_8J7F3AKktV-FelyCnqGs1ZM7H5F53OAga4"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section (Single Product Focus) -->
+<section class="relative h-screen min-h-[800px] flex items-center overflow-hidden pt-20">
+<!-- Background Morph Layer -->
+<div class="absolute inset-0 bg-gradient-to-br from-[#1a160d] via-[#2d2512] to-background-dark morph-transition"></div>
+<div class="relative w-full h-full max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+<div class="z-10 morph-transition">
+<span class="text-primary font-bold tracking-[0.3em] uppercase mb-4 block">Limited Edition 2024</span>
+<h2 class="text-7xl lg:text-9xl font-black text-white leading-none mb-6">
+                    ROLEX <br/> <span class="text-primary/40 italic font-serif">AURUM</span>
+</h2>
+<p class="text-lg text-slate-300 max-w-md mb-10 leading-relaxed">
+                    The definitive expression of gold. Engineering precision meets the most precious of elements. Featured: The Yacht-Master 42.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-background-dark px-10 py-4 font-bold rounded uppercase tracking-widest hover:brightness-110 transition-all">Discover</button>
+<button class="border border-white/20 text-white px-10 py-4 font-bold rounded uppercase tracking-widest hover:bg-white/10 transition-all">Catalog</button>
+</div>
+</div>
+<!-- Single High-Quality Watch Display -->
+<div class="relative h-full flex items-center justify-center">
+<div class="relative w-full max-w-2xl animate-float">
+<!-- High quality transparent watch image -->
+<img alt="Rolex Yacht-Master Gold" class="w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(238,186,43,0.15)] morph-transition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACxCXLY93UGiwE2I18jqBEKsltoCT-li50HwfvMWtp6AIteYRsjsErc1OCNpeWtPQv90asStWRnDA8lNKFKc95EohaXG5xS70mnr2Zx2O8n_hW6h1o34KwDcN384ppB0mdgVUxTqrBA1WjO9dSwuHLPk-zr7Irn6H9avQ-s-XHfV2NtnWsaA77fU7wjGqqzYeMqJFNFrV1QaziBQme_MqLNyuPBPfdgUjef27_gqVO-LRDY7JdKe1BP77kDpDGKvljJS36oezocz8"/>
+</div>
+</div>
+</div>
+<!-- Navigation Dots -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-4 z-20">
+<div class="w-12 h-1 bg-primary rounded-full"></div>
+<div class="w-12 h-1 bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
+<div class="w-12 h-1 bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
+<div class="w-12 h-1 bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
+</div>
+</section>
+<!-- Editorial Quote -->
+<section class="py-32 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-6 text-center">
+<div class="inline-block mb-8">
+<span class="material-symbols-outlined text-primary text-5xl">format_quote</span>
+</div>
+<h3 class="text-4xl md:text-6xl font-extralight tracking-tight text-slate-900 dark:text-slate-100 max-w-4xl mx-auto leading-tight italic font-serif">
+                Every second is a <span class="font-bold not-italic border-b-4 border-primary pb-1 font-display">masterpiece</span>, a calculated symphony of engineering and soul.
+            </h3>
+<p class="mt-12 text-primary tracking-[0.5em] uppercase text-sm font-bold">The Horológe Philosophy</p>
+</div>
+</section>
+<!-- 3D Rotating Brand Carousel -->
+<section class="py-24 relative overflow-hidden bg-slate-100 dark:bg-[#1a160d]">
+<div class="max-w-[1440px] mx-auto px-6 mb-16 flex justify-between items-end relative z-10">
+<div>
+<h4 class="text-primary uppercase tracking-widest font-bold mb-2">Curated Partners</h4>
+<h2 class="text-4xl font-black text-slate-900 dark:text-white">Our Foundations</h2>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all" href="#">View All Brands <span class="material-symbols-outlined">trending_flat</span></a>
+</div>
+<div class="carousel-3d-container">
+<div class="carousel-3d-inner">
+<!-- Brand Card 1 -->
+<div class="carousel-3d-item glass-card item-1">
+<span class="material-symbols-outlined text-primary text-6xl mb-4">crown</span>
+<h5 class="text-xl font-bold mb-1">Rolex</h5>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Iconic Crown</p>
+</div>
+<!-- Brand Card 2 -->
+<div class="carousel-3d-item glass-card item-2">
+<span class="material-symbols-outlined text-primary text-6xl mb-4">diamond</span>
+<h5 class="text-xl font-bold mb-1">Patek Philippe</h5>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Since 1839</p>
+</div>
+<!-- Brand Card 3 -->
+<div class="carousel-3d-item glass-card item-3">
+<span class="material-symbols-outlined text-primary text-6xl mb-4">verified</span>
+<h5 class="text-xl font-bold mb-1">IWC</h5>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Schaffhausen</p>
+</div>
+<!-- Brand Card 4 -->
+<div class="carousel-3d-item glass-card item-4">
+<span class="material-symbols-outlined text-primary text-6xl mb-4">auto_awesome</span>
+<h5 class="text-xl font-bold mb-1">Cartier</h5>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Jeweler of Kings</p>
+</div>
+<!-- Brand Card 5 -->
+<div class="carousel-3d-item glass-card item-5">
+<span class="material-symbols-outlined text-primary text-6xl mb-4">architecture</span>
+<h5 class="text-xl font-bold mb-1">Audemars Piguet</h5>
+<p class="text-xs text-slate-400 uppercase tracking-widest">Haute Horlogerie</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Items (Quick View Effect) -->
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-[1440px] mx-auto px-6">
+<div class="flex items-center justify-between mb-16">
+<h2 class="text-4xl font-black">Featured Acquisitions</h2>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary transition-colors hover:text-background-dark"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary transition-colors hover:text-background-dark"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative">
+<div class="aspect-[3/4] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 relative">
+<img alt="Omega Seamaster" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMSszem-S_g9mh43lkZ_bFS3BPIyUG6X5oKNHYQKDW8VjAUpdP7OQzUZoiykkPwAkfZpNsk9XOE9IfCLDcIRMUaP3uRmJbdG4whFTggAZEY8Bf3ZFamr8U60p_lM49JmOWw7zJOstquYC6R9McB4BA3s8PPijjZtUvOlt0rONAnUpnq-N3DFZxt6ISfPIYadPUSMTwH28ucp2mLcplTGbt3eCcdRVvvAhJZ3-6KSI5WLNopwvjbmanV2G_Sxei_dauq9II33KTj6c"/>
+<div class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4">
+<button class="bg-primary text-background-dark px-6 py-2 rounded font-bold uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
+<button class="bg-white/10 text-white px-6 py-2 rounded font-bold uppercase text-xs tracking-widest backdrop-blur-md transform translate-y-4 group-hover:translate-y-0 transition-transform delay-75">Wishlist</button>
+</div>
+</div>
+<div class="mt-6">
+<h6 class="text-sm text-primary font-bold tracking-widest uppercase mb-1">Omega</h6>
+<h4 class="text-lg font-bold mb-2">Seamaster Diver 300M</h4>
+<p class="text-xl font-light opacity-80">$5,900.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative">
+<div class="aspect-[3/4] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 relative">
+<img alt="IWC Portugieser" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDacbC8P1iJpGDTiXieazteM-ew_BDC9VMMLvO5BGK0y6nlxnWRb7SDHfuqWR2D0tM4WAZZ8HhxhnvCpvIugHjlw9iUrEYo3eE0KGfC86h-pVn5Jgxr3OiECGVspeLQ7VpeusTvlQ8cxZtAWqgC8E-68PLCTvgrvqbWv5dazcO-JgFyCEgq9-XFbiVNT0RABekHOD-Se_m6kJXDl34-V3nAA_F3YqeAmajWj5pOWv8UUsBKuild5w00t-c-w3xdOzncppfQO64Et9o"/>
+<div class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4">
+<button class="bg-primary text-background-dark px-6 py-2 rounded font-bold uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
+<button class="bg-white/10 text-white px-6 py-2 rounded font-bold uppercase text-xs tracking-widest backdrop-blur-md transform translate-y-4 group-hover:translate-y-0 transition-transform delay-75">Wishlist</button>
+</div>
+</div>
+<div class="mt-6">
+<h6 class="text-sm text-primary font-bold tracking-widest uppercase mb-1">IWC</h6>
+<h4 class="text-lg font-bold mb-2">Portugieser Chronograph</h4>
+<p class="text-xl font-light opacity-80">$8,400.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative">
+<div class="aspect-[3/4] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 relative">
+<img alt="Patek Calatrava" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBKRa9feZUj5QhZ0NtXrpW3heN-gQ3OepV3D3L4zb9pFpsYeaQ8sw8VqkjgfEvA692Mc9viekUXSTpILZaTNvuMxXs4MVJtkB_jEuBco2RwZTnTCey1s-uHClLcfjUaGFy2dSU_UAl6xJzvUDZPsHTs1UrDCnTdLVLLU7TBd3yolQr4-fR-uXRijAx0SvkdWCvNTUIcByVe2YDnQfc30cVv9oaeUspu1gL8HAdFTBTq3zqvgQUsxpuwWrkw6lQ9XdhVsrqwRQDPcc"/>
+<div class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4">
+<button class="bg-primary text-background-dark px-6 py-2 rounded font-bold uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
+<button class="bg-white/10 text-white px-6 py-2 rounded font-bold uppercase text-xs tracking-widest backdrop-blur-md transform translate-y-4 group-hover:translate-y-0 transition-transform delay-75">Wishlist</button>
+</div>
+</div>
+<div class="mt-6">
+<h6 class="text-sm text-primary font-bold tracking-widest uppercase mb-1">Patek Philippe</h6>
+<h4 class="text-lg font-bold mb-2">Calatrava 5227G</h4>
+<p class="text-xl font-light opacity-80">$37,850.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative">
+<div class="aspect-[3/4] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 relative">
+<img alt="Cartier Tank" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp6SMyreVdmvYrqO0SLeY-aOlGtnlWdHXoqzV06sxSsDXBzLBWy2kVvGLDT8dx3VFcgOVrpKigTxTkVPsU6TsloCDPA3n39CFi6XHixvgToox5C18_1KdQNNn6qhUtlwJ47r1Gi0Me8IXAV7t26BP3ku7ijwdO4BLdu03CJ1xJpuPxtq_d0UQ6P2P4xZAT9_K7mSMkUnlc7JI9H_hehCjgT4mBspcn54e-MN9hGw08jpa9d6tvPiGUK9eR_N5dnxNUor48zMc30Ug"/>
+<div class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4">
+<button class="bg-primary text-background-dark px-6 py-2 rounded font-bold uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-transform">Quick View</button>
+<button class="bg-white/10 text-white px-6 py-2 rounded font-bold uppercase text-xs tracking-widest backdrop-blur-md transform translate-y-4 group-hover:translate-y-0 transition-transform delay-75">Wishlist</button>
+</div>
+</div>
+<div class="mt-6">
+<h6 class="text-sm text-primary font-bold tracking-widest uppercase mb-1">Cartier</h6>
+<h4 class="text-lg font-bold mb-2">Tank Must Large</h4>
+<p class="text-xl font-light opacity-80">$3,450.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slick Testimonials Carousel -->
+<section class="py-24 bg-[#1a160d] overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-6">
+<div class="flex flex-col items-center text-center">
+<div class="text-[120px] leading-none text-primary/20 font-serif mb-[-60px]">“</div>
+<div class="w-full max-w-4xl overflow-hidden">
+<div class="flex transition-transform duration-700 ease-in-out">
+<div class="w-full shrink-0 px-4">
+<p class="text-3xl md:text-5xl font-serif italic text-white leading-tight mb-12">
+                                "The acquisition process was as timeless as the piece itself. Their expertise in vintage Patek models is unparalleled in the industry."
+                            </p>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-primary p-1">
+<img alt="Client" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoLzMnyKTqXlr8ROV17v6IBww1qoeXpOrATmWyKrscaHNG1NZgmZoqVT0vU5c-rYuKsXOMOvsNNRyAYoDAI_BEcHdGJ3GiyfX28JqiZtAJmfFUlbd0tZtBsyBAf5-KZWhdEHJxKH0-la73qC5ofST1WQ01FZ-0cVQ57y-OMKw7ypcEk02bclSbAj8_wd8x43BKN41-cDui_GM3Ah_BF6bAALTgX1eX_IcN6LjsRDk0_8J7F3AKktV-FelyCnqGs1ZM7H5F53OAga4"/>
+</div>
+<h5 class="text-xl font-bold uppercase tracking-widest">Jameson Rothschild</h5>
+<p class="text-primary text-sm font-bold mt-1">Private Collector</p>
+<div class="flex gap-1 mt-4">
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 mt-12">
+<button class="w-2 h-2 rounded-full bg-primary"></button>
+<button class="w-2 h-2 rounded-full bg-white/20"></button>
+<button class="w-2 h-2 rounded-full bg-white/20"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- From the Vault (Blog Preview) -->
+<section class="py-24 bg-slate-100 dark:bg-[#1a160d]">
+<div class="max-w-[1440px] mx-auto px-6">
+<h2 class="text-4xl font-black mb-12 flex items-center gap-4">
+                From the Vault
+                <span class="h-px bg-primary/30 grow"></span>
+</h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<article class="flex flex-col group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6">
+<img alt="Vintage components" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZYtsGSjT57UNTmUa70PW-SeH9Ql09-klCoYKYVg5uVKJg0oRRk7SbnwpQAeyMLZfHz6hvHRUjcZtSZvxoY0ZrOfAXUxja-FCFEpuUFYlejoRsjdM_zvyc92dfah9fhlPR9OA5DBSxVVD7ncpqHFmNFmzsv6FzUMboSDo8Kt1cL8ad5TKXawpuSeZkbFe4LmXLkGAJikg4rdPnSnHp0fpfImlzeWV14nq9-MX3UjIEsbB35rU0d3-Klf6n6kGAob_FjI0yc67h-UU"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Heritage</span>
+<span class="text-slate-500 text-xs">March 14, 2024</span>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors leading-snug">The Evolution of the Tourbillon: 200 Years of Precision</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400">Discover how Abraham-Louis Breguet's invention still defines modern horology.</p>
+</article>
+<article class="flex flex-col group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6">
+<img alt="Watchmaker" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Fa5kM02XeG2ec9c7n4u6_2JtClhDI6Df5ymIZ-5WDVSu3RQW9z7sL6exiNaMW5sgiLnbjnkLPQuHEVk472MmmRIr4E7yYzRG-uKEQITRhTSzYY3ewi37Sj0hXQ14deHnWFS9bUqpdbFJXVuhstU3knYJ3MJRBw_w48ur8djP5LLEmLQ54xVyFqb7l3rwJ_11qAHCpLWShO6UvUdimC4pl0RLp4ivY9dLgo4qXqFkAQPYIDLf1XwMxUm63qV83hJ7Cbl6kH9jepY"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Artisan</span>
+<span class="text-slate-500 text-xs">February 28, 2024</span>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors leading-snug">Behind the Dial: The Master Enamellers of Geneva</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400">A journey into the rare craft of Grand Feu enameling in luxury timepieces.</p>
+</article>
+<article class="flex flex-col group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6">
+<img alt="Store interior" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw3K1Sz67FwOcMZ7qOrZ5s2VkpWsnUwatE9bWCwzbEYeZ2IDaznkat3eJCeY7TV40-AZ3stdq72JIE-gLCAo_kCqmjJIPWrlgR4joNDRX_4owUF77WmIQgbBnjPXd9n8BdAnOE0YaxQRYrGyJi1nibdmpu6bA1JEJhOmjuH6VCUoRF1hzhD7_yJxbQDyLOgTv9vVnIIC8s6RDj1URQyl8osWmn39CKsrVaur7_HxQiSlCpI2LxP9aMefwH5cqSkZ9qS7p-zS3r7W4"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Guide</span>
+<span class="text-slate-500 text-xs">January 10, 2024</span>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors leading-snug">The Collector’s Compass: Starting Your Watch Journey</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400">Five essential steps for the discerning individual beginning their collection.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark text-slate-100 pt-24 pb-12 border-t border-primary/10">
+<div class="max-w-[1440px] mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<h2 class="text-2xl font-extrabold tracking-tighter">HOROLÓGE</h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+                        The world's premier destination for iconic timepieces. Curating excellence since 1924, we bring the history of time to your wrist.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#"><span class="material-symbols-outlined text-xl font-bold">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#"><span class="material-symbols-outlined text-xl">camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-8 tracking-widest uppercase">Collections</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Dive Watches</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Chronographs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Dress Watches</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Limited Editions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pre-Owned Classics</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-8 tracking-widest uppercase">Concierge</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Valuation Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Maintenance &amp; Repair</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bespoke Ordering</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Global Delivery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Authenticity Check</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-8 tracking-widest uppercase">Newsletter</h4>
+<p class="text-slate-400 text-sm mb-6">Receive exclusive access to new acquisitions and horological insights.</p>
+<form class="flex gap-2">
+<input class="bg-white/5 border border-white/10 rounded px-4 py-2 text-sm grow focus:ring-1 focus:ring-primary focus:outline-none" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-background-dark font-bold px-4 py-2 rounded text-sm hover:brightness-110">JOIN</button>
+</form>
+</div>
+</div>
+<div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-slate-500 uppercase tracking-widest">© 2024 Horológe International. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="text-xs text-slate-500 hover:text-white transition-colors uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors uppercase tracking-widest" href="#">Terms of Service</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors uppercase tracking-widest" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

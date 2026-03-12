@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eeba2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"],
+                        "serif": ["Cormorant Garamond"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23eeba2b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl">deployed_code</span>
+<h2 class="text-xl font-extrabold tracking-widest text-slate-900 dark:text-slate-100 uppercase">Horológe</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">Pre-Owned</a>
+<a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">Journal</a>
+<a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">Concierge</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-slate-200 dark:bg-primary/5 border border-primary/10 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-slate-500 dark:text-primary/60 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-500" placeholder="Search collection..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 size-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col lg:flex-row flex-1 px-6 lg:px-20 py-8 gap-12">
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="sticky top-28 space-y-10">
+<div>
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-6 border-b border-primary/20 pb-2">Filters</h3>
+<div class="space-y-8">
+<div>
+<h4 class="text-sm font-semibold mb-4">Brand</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded-sm border-primary/30 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Rolex</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded-sm border-primary/30 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Patek Philippe</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded-sm border-primary/30 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Audemars Piguet</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded-sm border-primary/30 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Cartier</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded-sm border-primary/30 text-primary focus:ring-primary bg-transparent" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">Vacheron Constantin</span>
+</label>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-semibold mb-4">Price Range</h4>
+<div class="px-2">
+<input class="w-full h-1 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary" max="100000" min="1000" type="range"/>
+<div class="flex justify-between mt-3 text-xs text-slate-500 font-medium uppercase tracking-tight">
+<span>$1,000</span>
+<span>$100,000+</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-semibold mb-4">Movement</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="border-primary/30 text-primary focus:ring-primary bg-transparent" name="movement" type="radio"/>
+<span class="text-sm group-hover:text-primary transition-colors">Automatic</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="border-primary/30 text-primary focus:ring-primary bg-transparent" name="movement" type="radio"/>
+<span class="text-sm group-hover:text-primary transition-colors">Manual Wind</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="border-primary/30 text-primary focus:ring-primary bg-transparent" name="movement" type="radio"/>
+<span class="text-sm group-hover:text-primary transition-colors">Quartz</span>
+</label>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-semibold mb-4">Style</h4>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 text-xs border border-primary/20 rounded-lg hover:border-primary hover:text-primary transition-all">Dress</button>
+<button class="px-3 py-1.5 text-xs border border-primary/20 rounded-lg hover:border-primary hover:text-primary transition-all">Sport</button>
+<button class="px-3 py-1.5 text-xs border border-primary/20 rounded-lg hover:border-primary hover:text-primary transition-all bg-primary/10 text-primary border-primary">Dive</button>
+<button class="px-3 py-1.5 text-xs border border-primary/20 rounded-lg hover:border-primary hover:text-primary transition-all">Heritage</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<div class="flex items-center gap-2 text-xs text-slate-500 uppercase tracking-widest mb-2">
+<span>Home</span>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary">Watches</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-black tracking-tight dark:text-white">Premium Timepieces</h1>
+<p class="text-slate-500 mt-2 max-w-lg">Explore our meticulously curated selection of the world's most prestigious mechanical watches.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Sort:</span>
+<select class="bg-transparent border border-primary/20 rounded-lg px-4 py-2.5 text-sm focus:ring-primary focus:border-primary min-w-[180px] cursor-pointer">
+<option>Newest Arrivals</option>
+<option>Price: High to Low</option>
+<option>Price: Low to High</option>
+<option>Popularity</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close up of a luxury mechanical gold watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIpMHPEqNY8CszkeXgafRwZQkDl7zZyU0PV2mxtzpfxW9Y_g2j4hKF6z_OXm0c-4mCq_X1x3qp0_dnBXQ81aZaBc4Ly7qas_66sjoL14oQkcdwTaCPVq-n75x4gaBy5SeIyZji0HFAUn1CW5tIl1S7Y3G2ENo9WvaahLaZ_6c9K-c1Vys4NvIjzjZFmjyOgsgab9Qrxi7mop7WM3vIcsp5ygCeiH7Nfq9a_iKC2vP64ILFFhNMIp3eaWZ4hvAV2_iuRcspJChuXNw"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<span class="absolute top-4 left-4 bg-primary text-background-dark text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded">New</span>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Rolex</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Day-Date 40 President</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$42,500</p>
+</div>
+</div>
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Elegant silver watch with blue dial on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPGxpNP1YXlIqnOwfIVBgPZ7ZLNMdrjflsAjny-yx46_VuGsK888GySq8vTl2dkeM1ArDUKP4jtFTRGZQEO4fojinAa_rEOv7HW5PY9IZijzholKtYlia2f9vwzc4hTlMt_XX734hNLun9enXxySLi0oMkKcfh8_pi7J9AYUxFdlwFQJvrMmcYoDbWr5-DMWiqkNQuUcfPHxel9XD1tbqCqmgIVRajLld5IWIRT65DBYQnMLiLW6nK5nw4NmCHOuaihOv-q2mYVNQ"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Patek Philippe</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Nautilus 5711 Blue</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$185,000</p>
+</div>
+</div>
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Classic leather strap watch minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2ttA9AeCMahX_Czb8gNpB19RvjbZtNGUzytQgxjVNivQzhpY9lhQZtbn1CSmeCZT-TfISKY0BHaB-m6mz5EFJJ1JNrLanIEHT0aaC6e2HuM4PmjGMLOfLI4r5Unaw-XCemsu-QnmhdARd2zFmcQ_nAH1riPySn4yZPdfshTSWEHqWruv6Z-scdTq9GhRc99EV_tAEutJShr8PTZ9b3rc6fwi3Gj0Ui8-LmA2_AoZbbc2T5Es0gzSODNsJV_7ul0i6AJk04Gz1ijM"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Cartier</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Santos de Cartier</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$7,800</p>
+</div>
+</div>
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Luxury black ceramic sport watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeBZbuEwPZp-XDgaONfOdAjQza7OijC_kFoqO2zKfmuz60ZrP-EbEtU3YkYi1KvaQkAhNaz8B_NTa5THM_ho9z_9EgOojmViYKOUMvPAKzjcYIF9YYEi6NkE8W2AV4YxIEaGl_qT7sDvoMEnFqgxvQjIPUtxCqr7IGvZXjncAfUqzi7fsFd2tUIChdwm5zroaPbW9mzUyCeDjXYFHRp6uWsGIyh0qcWXbgofEaX6ajMi_zu0RolD8fU7mpnijA2-nHuj7ZFQYpahg"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Audemars Piguet</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Royal Oak "Jumbo"</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$68,200</p>
+</div>
+</div>
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern titanium dive watch close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtUrYToYNFfR0K0uGo6gzVhRMFhBGBnjw5lg6GfCz1Su3hi5jksGu662koI5lYPELuifCD6aJLvd7IH8p3v3sdQ4YGc_8MqxWf8EMUOOTiGGFUxd1fPzVkb6GLq1vzsnlGmLP-3Nxn-5wGFLHuYc7RzeR3lDuIciZ7BvHW-b4WBiVy2Cv8Vdp9kLB5F4kk9q7fk0KpQG4rmZd-MOYVSG9k-5Rdi8ZCpLUX5Lwrqsw3w2FmL35WvKN6IY3K3cwHdoReBNd2em2tIk4"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Vacheron Constantin</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Overseas Chronograph</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$32,100</p>
+</div>
+</div>
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Premium chronograph watch with metal bracelet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0fEv3pWN7Wdr5eef0nw09_cnIwRkhmqv9XNXL9hO9FTfWreUKnwQf9T72tojT3lPdF6UeubWMRSNFxNbLh4tSXEyG4yhTmL8mjS83tXwgO5Pa60LEeXGaDi6kDUsFKsOOQHX0i2gMjt5ztkTkw3gyao2DxkRRHHGp-xJE4YQxawhJ9cWAOCwrP_EhfMpB0wT8ZqHRFNd-ud537M7aDI_CWZpFQsdi51HteAEsDjSPy-DjZ7CK87Vj1M6un5i-h8_zB89dNT2PhmY"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Rolex</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Submariner "Hulk"</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$21,400</p>
+</div>
+</div>
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist luxury watch on grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD42oe4jgt9P0_FLzWoYAvy1xvlZD2h8pvR9nNnxEtCQzYZL_WoZSPXdr9UvoOTxnP6PLa5BNlXjPm8Akz9THGKZX2FZgTwcUWBCVfIoFTJ2yZ_cq3Zw8mEWiyUX75VsI-dresY85wLcYDpotnaVUbDGBYB51RPwaUswT1KJ0yu4i9zsqSrW4o0tq7ilVbX6C6m_LvTWmp23hEsIKpFv_Bl57qo09DREu_jWXYKAlAnJji5kcKGc4vNS0EMC0UCQKlejXZdsqLI7hQ"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">A. Lange &amp; Söhne</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Lange 1 Moon Phase</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$54,000</p>
+</div>
+</div>
+<div class="group flex flex-col bg-slate-100 dark:bg-background-dark/50 border border-primary/5 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+<div class="relative aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-primary/5">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Silver watch with intricate mechanical details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr3_nuABpTk6RwiX2QlzPN4D9-yiy62kqlilo2ZV5T2sSGABjK4Gv5Lw1rmk9IAMWyP_qhCmAiJ_4irVIczMgGlMdrIj2Cn5QJlC2Dvb8lLjsKhjn94_u6PAYa5DTTy9dxRlw5EaVnyz2vpyWRfHHbjizpK6Ij0-BDPNRojtK96QMpwXdyvbFhpIxTK-_WUwTTm_2b5nO4Vjmn4RjVAnqAIxR_QOvtlE8c-xUyEtC64TOCfy6tY6b2qbfu89ciRn3B6tQ_xh9OFmk"/>
+<div class="absolute inset-0 bg-background-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 gap-3">
+<button class="flex-1 bg-white text-background-dark py-3 text-xs font-bold uppercase tracking-widest rounded shadow-xl hover:bg-primary hover:text-white transition-colors">Quick View</button>
+<button class="bg-primary text-white p-3 rounded shadow-xl hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Jaeger-LeCoultre</h3>
+<h2 class="text-2xl font-serif italic dark:text-white mb-4">Reverso Duoface</h2>
+<p class="text-lg font-bold text-slate-900 dark:text-primary">$12,400</p>
+</div>
+</div>
+</div>
+<div class="mt-20 flex flex-col items-center gap-6">
+<p class="text-xs font-bold uppercase tracking-widest text-slate-500">Showing 8 of 124 timepieces</p>
+<button class="px-12 py-4 border border-primary text-primary hover:bg-primary hover:text-background-dark transition-all duration-300 font-bold text-xs uppercase tracking-[0.2em] rounded">
+                        Load More Selection
+                    </button>
+</div>
+</div>
+</main>
+<footer class="bg-slate-200 dark:bg-background-dark border-t border-primary/10 px-6 lg:px-20 py-16 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">deployed_code</span>
+<h2 class="text-lg font-extrabold tracking-widest uppercase">Horológe</h2>
+</div>
+<p class="text-sm text-slate-500 leading-relaxed">Defining the standards of luxury timekeeping since 1984. Curated for the distinguished collector.</p>
+</div>
+<div>
+<h4 class="text-xs font-black uppercase tracking-widest mb-6">Discovery</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">New Releases</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Grand Complications</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sport Watches</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bespoke Orders</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-black uppercase tracking-widest mb-6">Concierge</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Delivery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Authentication</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Service &amp; Repair</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sell Your Watch</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-black uppercase tracking-widest mb-6">Updates</h4>
+<p class="text-sm text-slate-500 mb-4">Join our inner circle for exclusive access.</p>
+<div class="flex">
+<input class="bg-primary/5 border border-primary/20 rounded-l-lg px-4 py-2 w-full text-sm focus:ring-0 focus:border-primary" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-background-dark px-4 py-2 rounded-r-lg font-bold text-xs">Join</button>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] uppercase tracking-widest text-slate-600">© 2024 Horológe International. All Rights Reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">language</span></a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">account_balance_wallet</span></a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
