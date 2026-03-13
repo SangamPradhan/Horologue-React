@@ -47,15 +47,15 @@ const CartDrawer = () => {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-primary/10">
               <div className="flex items-center gap-3">
-                <ShoppingBag className="w-5 h-5 text-primary" />
-                <h2 className="font-display text-xl font-semibold">Your Selection ({totalItems})</h2>
+                <ShoppingBag className="w-5 h-5 text-gold" />
+                <h2 className="font-display text-xl font-black text-gold uppercase tracking-widest">Your Selection ({totalItems})</h2>
               </div>
               <button 
                 onClick={() => setIsOpen(false)} 
-                className="p-2 hover:bg-white/5 rounded-full transition-colors group"
+                className="p-2 hover:bg-gold/10 rounded-full transition-colors group text-slate-400 hover:text-gold"
                 aria-label="Close cart"
               >
-                <X className="w-5 h-5 group-hover:text-primary transition-colors" />
+                <X className="w-5 h-5 transition-colors" />
               </button>
             </div>
 
@@ -89,9 +89,9 @@ const CartDrawer = () => {
                       <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     </div>
                     <div className="flex-1 min-w-0 flex flex-col justify-center">
-                      <p className="text-[10px] font-black tracking-[0.2em] text-primary uppercase mb-1">{item.brand}</p>
-                      <p className="font-serif italic text-lg leading-tight truncate text-white">{item.name}</p>
-                      <p className="text-primary font-black mt-2 tracking-tighter">${item.price.toLocaleString()}</p>
+                      <p className="text-[10px] font-black tracking-[0.2em] text-gold uppercase mb-1">{item.brand}</p>
+                      <p className="font-serif italic text-lg leading-tight truncate text-white dark:text-gold">{item.name}</p>
+                      <p className="text-gold font-black mt-2 tracking-tighter">${item.price.toLocaleString()}</p>
                       <div className="flex items-center gap-4 mt-3">
                         <div className="flex items-center gap-3 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
                           <button
@@ -129,12 +129,12 @@ const CartDrawer = () => {
                   <span className="font-display text-2xl font-black text-primary tracking-tighter">${totalPrice.toLocaleString()}</span>
                 </div>
                 <div className="space-y-3">
-                  <button className="w-full py-5 bg-primary text-background-dark font-black tracking-[0.2em] text-xs rounded-xl uppercase hover:brightness-110 transition-all shadow-xl shadow-primary/20">
+                  <button className="w-full py-5 bg-gold text-background-dark font-black tracking-[0.2em] text-xs rounded-xl uppercase hover:brightness-110 transition-all shadow-xl shadow-primary/20 border-none">
                     Acquire Selection
                   </button>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="w-full py-4 text-[10px] font-black text-slate-500 hover:text-primary transition-all uppercase tracking-[0.3em] flex items-center justify-center gap-2"
+                    className="w-full py-4 text-[10px] font-black text-slate-500 hover:text-gold transition-all uppercase tracking-[0.3em] flex items-center justify-center gap-2"
                   >
                     Continue Curation
                   </button>

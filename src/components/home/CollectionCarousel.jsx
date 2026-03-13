@@ -32,11 +32,11 @@ const CollectionCarousel = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-[10px] font-black tracking-[0.4em] text-primary/60 uppercase mb-4 block">
+            <span className="text-[10px] font-black tracking-[0.4em] text-gold uppercase mb-4 block">
               Our Collection
             </span>
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
-              <h2 className="font-serif text-5xl md:text-7xl text-slate-900 dark:text-white leading-[0.95] tracking-tighter">
+              <h2 className="font-serif text-5xl md:text-7xl text-slate-900 dark:text-primary leading-[0.95] tracking-tighter">
                 For the <br />
                 <span className="font-bold italic">Watch You Deserve</span>
               </h2>
@@ -73,7 +73,7 @@ const CollectionCarousel = () => {
                   </div>
 
                   {/* Gold Border Highlight */}
-                  <div className="absolute inset-0 border border-[#C9A84C]/30 rounded-[24px] pointer-events-none" />
+                  <div className="absolute inset-0 border border-gold/30 rounded-[24px] pointer-events-none" />
                 </div>
               ))}
             </div>

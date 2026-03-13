@@ -8,9 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary": "#ffffff", // Pure Silver/White Accent
+        "primary": "#C5A059", // Luxury Gold 
+        "luxury-gold": "#C5A059",
+        "accent-gold": "#C5A059",
         "background-light": "#ffffff",
-        "background-dark": "#000000",
+        "background-dark": "rgb(1 3 10)",
       },
       fontFamily: {
         "display": ["Manrope", "sans-serif"],
