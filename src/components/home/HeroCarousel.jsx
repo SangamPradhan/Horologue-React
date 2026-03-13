@@ -141,7 +141,7 @@ const HeroCarousel = () => {
                 </p>
                 <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black leading-[1] mb-6 uppercase tracking-tighter" style={{ color: slide.textColor }}>
                   {slide.tagline} <br />
-                  <span className="italic font-serif opacity-50">{slide.highlight}</span>
+                  <span className="italic font-serif text-gold">{slide.highlight}</span>
                 </h1>
                 <p className="text-sm md:text-base mb-8 max-w-md leading-relaxed font-light" style={{ color: slide.textColor + 'aa' }}>
                   {slide.subtitle}
@@ -150,7 +150,7 @@ const HeroCarousel = () => {
                 <div className="flex justify-center md:justify-start">
                   <Link
                     to="/shop"
-                    className="inline-block bg-primary text-background-dark px-8 py-3.5 rounded font-black tracking-[0.15em] text-xs uppercase transition-all hover:brightness-110 hover:scale-105 shadow-lg shadow-primary/20"
+                    className="inline-block bg-gold text-background-dark px-8 py-3.5 rounded font-black tracking-[0.15em] text-xs uppercase transition-all hover:brightness-110 hover:scale-105 shadow-xl shadow-gold/30"
                   >
                     Explore the Catalogue
                   </Link>
@@ -192,7 +192,7 @@ const HeroCarousel = () => {
 
       {/* Controls */}
       <div className="absolute bottom-12 left-0 right-0 z-30 flex items-center justify-center gap-6">
-        <button onClick={prev} className="p-2 text-white/50 hover:text-white transition-colors">
+        <button onClick={prev} className="p-2 text-white/50 hover:text-gold transition-colors">
           <ChevronLeft className="w-5 h-5" />
         </button>
         <div className="flex gap-2">
@@ -208,7 +208,7 @@ const HeroCarousel = () => {
             />
           ))}
         </div>
-        <button onClick={next} className="p-2 text-white/50 hover:text-white transition-colors">
+        <button onClick={next} className="p-2 text-white/50 hover:text-gold transition-colors">
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
@@ -219,8 +219,8 @@ const HeroCarousel = () => {
         transition={{ repeat: Infinity, duration: 3 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3"
       >
-        <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white">Explore</span>
-        <div className="w-[1px] h-10 bg-gradient-to-b from-primary/60 to-transparent" />
+        <span className="text-[9px] font-black uppercase tracking-[0.4em] text-primary">Explore</span>
+        <div className="w-[1px] h-10 bg-gradient-to-b from-primary to-transparent" />
       </motion.div>
     </section>
   );

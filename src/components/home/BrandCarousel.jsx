@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 const brands = [
   { id: 1, name: "Rolex", logo: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800" },
@@ -32,22 +32,22 @@ const BrandCarousel = () => {
         className="max-w-[1440px] mx-auto px-6 relative"
       >
         <div className="text-center mb-4 md:mb-8">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-primary text-[10px] font-black tracking-[0.4em] uppercase mb-4"
+            className="text-gold text-[10px] font-black tracking-[0.4em] uppercase mb-4"
           >
             The Foundations
           </motion.p>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white uppercase tracking-tighter"
+            className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-primary uppercase tracking-tighter"
           >
-            Our Curated <span className="italic font-serif font-light lowercase text-primary/60">Partners</span>
+            Our Curated <span className="italic font-serif font-light lowercase text-gold/80">Partners</span>
           </motion.h2>
         </div>
 
@@ -57,7 +57,7 @@ const BrandCarousel = () => {
             {brands.map((brand, idx) => {
               // Exact center calculation to ensure perfect alignment
               const distance = idx - (brands.length - 1) / 2;
-              
+
               // Responsive Parameters
               const rotation = isMobile ? distance * 8 : distance * 15;
               const xTranslation = isMobile ? distance * 45 : (isTablet ? distance * 120 : distance * 180);
@@ -68,8 +68,8 @@ const BrandCarousel = () => {
                 <motion.div
                   key={brand.id}
                   initial={{ opacity: 0, scale: 0.5, y: 100 }}
-                  whileInView={{ 
-                    opacity: 1, 
+                  whileInView={{
+                    opacity: 1,
                     scale: scale,
                     rotate: rotation,
                     x: xTranslation,
@@ -77,13 +77,13 @@ const BrandCarousel = () => {
                     zIndex: 10 - Math.abs(Math.round(distance))
                   }}
                   viewport={{ once: true }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 80, 
+                  transition={{
+                    type: "spring",
+                    stiffness: 80,
                     damping: 20,
-                    delay: idx * 0.05 
+                    delay: idx * 0.05
                   }}
-                  whileHover={!isMobile ? { 
+                  whileHover={!isMobile ? {
                     scale: scale + 0.05,
                     y: yTranslation - 20,
                     zIndex: 25,
@@ -94,12 +94,12 @@ const BrandCarousel = () => {
                              overflow-hidden cursor-pointer group"
                 >
                   <div className="absolute inset-0 velvet-texture opacity-30 group-hover:opacity-50 transition-opacity pointer-events-none" />
-                  
+
                   <div className="absolute inset-0 p-4 md:p-8 flex items-center justify-center">
                     <div className="w-full h-full relative">
-                      <img 
-                        src={brand.logo} 
-                        alt={brand.name} 
+                      <img
+                        src={brand.logo}
+                        alt={brand.name}
                         className="w-full h-full object-cover rounded-lg md:rounded-xl filter drop-shadow-xl brightness-90 group-hover:brightness-110 transition-all duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

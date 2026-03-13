@@ -43,8 +43,8 @@ const TestimonialsCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-4xl md:text-5xl font-light dark:text-white uppercase tracking-tighter">
-            Words of <span className="text-primary italic">Distinction</span>
+          <h2 className="font-display text-4xl md:text-5xl font-light dark:text-gold uppercase tracking-tighter">
+            Words of <span className="text-gold italic">Distinction</span>
           </h2>
         </motion.div>
 
@@ -59,7 +59,7 @@ const TestimonialsCarousel = () => {
               className="w-full"
             >
               {/* Quote mark */}
-              <span className="font-display text-7xl text-primary leading-none">"</span>
+              <span className="font-display text-7xl text-gold leading-none">"</span>
               <p className="font-display text-xl md:text-2xl italic text-slate-700 dark:text-slate-300 leading-relaxed mb-8 -mt-6">
                 {testimonials[current].text}
               </p>
@@ -70,12 +70,12 @@ const TestimonialsCarousel = () => {
                   className="w-12 h-12 rounded-full object-cover border-2 border-primary/30"
                 />
                 <div className="text-left">
-                  <p className="font-semibold text-sm dark:text-white">{testimonials[current].name}</p>
+                  <p className="font-semibold text-sm dark:text-primary">{testimonials[current].name}</p>
                   <p className="text-xs text-slate-500 dark:text-slate-400">{testimonials[current].location}</p>
                 </div>
                 <div className="flex gap-0.5 ml-2">
                   {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />
                   ))}
                 </div>
               </div>
@@ -90,7 +90,7 @@ const TestimonialsCarousel = () => {
               key={i}
               onClick={() => setCurrent(i)}
               className={`h-2 rounded-full transition-all duration-300 ${
-                i === current ? 'bg-primary w-6' : 'bg-slate-300 dark:bg-white/10 w-2'
+                i === current ? 'bg-primary w-6' : 'bg-slate-300 dark:bg-primary/20 w-2'
               }`}
             />
           ))}

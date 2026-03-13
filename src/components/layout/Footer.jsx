@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
-              <h2 className="text-2xl font-extrabold tracking-tighter">HOROLÓGE</h2>
+              <h2 className="text-2xl font-extrabold tracking-tighter text-primary">HOROLÓGE</h2>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               The world's premier destination for iconic timepieces. Curating excellence since 1924, we bring the history of time to your wrist.
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase">Collections</h4>
+            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-primary">Collections</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><a className="hover:text-primary transition-colors" href="#">Dive Watches</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Chronographs</a></li>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase">Concierge</h4>
+            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-primary">Concierge</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><a className="hover:text-primary transition-colors" href="#">Valuation Services</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Maintenance & Repair</a></li>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase">Newsletter</h4>
+            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-primary">Newsletter</h4>
             <p className="text-slate-400 text-sm mb-6">Receive exclusive access to new acquisitions and horological insights.</p>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input 
@@ -65,9 +65,9 @@ const Footer = () => {
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs text-slate-500 uppercase tracking-widest">© 2024 Horológe International. All Rights Reserved.</p>
           <div className="flex gap-8">
-            <a className="text-xs text-slate-500 hover:text-white transition-colors uppercase tracking-widest" href="#">Privacy Policy</a>
-            <a className="text-xs text-slate-500 hover:text-white transition-colors uppercase tracking-widest" href="#">Terms of Service</a>
-            <a className="text-xs text-slate-500 hover:text-white transition-colors uppercase tracking-widest" href="#">Accessibility</a>
+            <a className="text-xs text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Privacy Policy</a>
+            <a className="text-xs text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Terms of Service</a>
+            <a className="text-xs text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Accessibility</a>
           </div>
         </div>
       </div>

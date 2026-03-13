@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ShoppingBag, Moon, Sun, Menu, X, Instagram, Facebook, Twitter, Search } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Facebook, Instagram, Menu, Moon, Search, ShoppingBag, Sun, Twitter, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Collections', to: '/shop' },
@@ -84,16 +84,15 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <motion.nav
-        className={`fixed top-10 left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled ? 'bg-white/95 dark:bg-background-dark/95 backdrop-blur-md shadow-2xl border-b border-primary/5 h-16' : 'bg-transparent h-24'
-        }`}
+        className={`fixed top-10 left-0 right-0 z-40 transition-all duration-500 ${scrolled ? 'bg-white/95 dark:bg-background-dark/95 backdrop-blur-md shadow-2xl border-b border-primary/5 h-16' : 'bg-transparent h-24'
+          }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 h-full flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
-            <svg viewBox="0 0 24 24" className="w-7 h-7 text-primary transition-transform duration-500 group-hover:rotate-180" fill="currentColor">
+            <svg viewBox="0 0 24 24" className="w-7 h-7 text-gold transition-transform duration-500 group-hover:rotate-180" fill="currentColor">
               <path d="M12 2L13.09 8.26L18 6L14.74 10.91L21 12L14.74 13.09L18 18L13.09 15.74L12 22L10.91 15.74L6 18L9.26 13.09L3 12L9.26 10.91L6 6L10.91 8.26L12 2Z" />
             </svg>
-            <span className="font-display text-2xl font-black tracking-[0.2em] text-slate-900 dark:text-white uppercase">HOROLÓGE</span>
+            <span className="font-display text-2xl font-black tracking-[0.2em] text-slate-900 dark:text-primary uppercase">HOROLÓGE</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -102,12 +101,11 @@ const Navbar = () => {
               <Link
                 key={link.label}
                 to={link.to}
-                className="relative text-[11px] font-black uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 hover:text-primary transition-colors group"
+                className="relative text-[11px] font-black uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 hover:text-gold transition-colors group"
               >
                 {link.label}
-                <span className={`absolute -bottom-2 left-0 h-[2px] bg-primary transition-all duration-500 ${
-                  location.pathname === link.to ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
+                <span className={`absolute -bottom-2 left-0 h-[2px] bg-gold transition-all duration-500 ${location.pathname === link.to ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
               </Link>
             ))}
             <button className="p-2 text-slate-400 hover:text-primary transition-colors">
@@ -118,7 +116,7 @@ const Navbar = () => {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-3 text-slate-900 dark:text-white bg-primary/5 rounded-xl border border-primary/10"
+            className="md:hidden p-3 text-slate-900 dark:text-primary bg-primary/5 rounded-xl border border-primary/10"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -135,16 +133,16 @@ const Navbar = () => {
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed inset-0 z-50 bg-white dark:bg-background-dark flex flex-col items-center justify-center p-8"
           >
-            <button 
+            <button
               onClick={() => setMobileOpen(false)}
-              className="absolute top-8 right-8 p-3 text-slate-900 dark:text-white bg-primary/5 rounded-xl border border-primary/10"
+              className="absolute top-8 right-8 p-3 text-slate-900 dark:text-primary bg-primary/5 rounded-xl border border-primary/10"
             >
               <X className="w-6 h-6" />
             </button>
             <nav className="flex flex-col items-center gap-8 text-center">
               <Link
                 to="/"
-                className="font-display text-6xl font-black tracking-tighter text-slate-900 dark:text-white mb-12 opacity-10"
+                className="font-display text-6xl font-black tracking-tighter text-slate-900 dark:text-primary mb-12 opacity-10"
               >
                 HOROLÓGE
               </Link>
@@ -157,9 +155,8 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.to}
-                    className={`text-4xl font-serif italic transition-all duration-300 ${
-                      location.pathname === link.to ? 'text-primary scale-110' : 'text-slate-400 hover:text-primary hover:scale-110'
-                    }`}
+                    className={`text-4xl font-serif italic transition-all duration-300 ${location.pathname === link.to ? 'text-primary scale-110' : 'text-slate-400 hover:text-primary hover:scale-110'
+                      }`}
                   >
                     {link.label}
                   </Link>

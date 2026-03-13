@@ -1,12 +1,11 @@
-import React from 'react';
+import { blogPosts } from '@/data/blogs';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { blogPosts } from '@/data/blogs';
 
 const BlogPreview = () => {
   return (
     <section className="py-24 bg-background-light dark:bg-background-dark">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -15,8 +14,8 @@ const BlogPreview = () => {
       >
         <div className="flex justify-between items-end mb-16">
           <div>
-            <h4 className="text-primary uppercase tracking-[0.2em] font-bold mb-2">The Archive</h4>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase">From the Vault</h2>
+            <h4 className="text-gold uppercase tracking-[0.2em] font-bold mb-2">The Archive</h4>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-primary tracking-tighter uppercase">From the Vault</h2>
           </div>
           <button className="hidden sm:flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-sm hover:gap-4 transition-all">
             View All Stories <ArrowRight className="w-4 h-4" />
@@ -25,7 +24,7 @@ const BlogPreview = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {blogPosts.map((post, idx) => (
-            <motion.div 
+            <motion.div
               key={post.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -37,8 +36,8 @@ const BlogPreview = () => {
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
                   <span className="bg-white text-background-dark px-6 py-2.5 rounded font-black uppercase text-xs tracking-[0.2em] shadow-2xl">Read Story</span>
                 </div>
-                <img 
-                  src={post.image} 
+                <img
+                  src={post.image}
                   alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
@@ -47,7 +46,7 @@ const BlogPreview = () => {
                 <span className="bg-primary/10 text-primary text-[10px] font-black px-3 py-1 rounded uppercase tracking-[0.2em] border border-primary/10">{post.category}</span>
                 <span className="text-slate-400 text-xs font-bold uppercase tracking-widest">{post.date}</span>
               </div>
-              <h3 className="text-2xl font-serif italic text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors leading-tight">
+              <h3 className="text-2xl font-serif italic text-slate-900 dark:text-primary group-hover:text-primary transition-all mb-3 leading-tight">
                 {post.title}
               </h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed line-clamp-2 font-medium">
