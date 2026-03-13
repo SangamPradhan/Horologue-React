@@ -9,6 +9,12 @@ const Heritage = () => {
     offset: ["start start", "end end"]
   });
 
+  const timelineRef = useRef(null);
+  const { scrollYProgress: timelineProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start center", "end center"]
+  });
+
   const timelineItems = [
     {
       year: "1924",
@@ -149,9 +155,13 @@ const Heritage = () => {
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
           
-          <div className="relative">
+          <div className="relative" ref={timelineRef}>
             {/* Vertical Line */}
-            <div className="absolute left-1/2 -translate-x-1/2 h-full w-[1px] bg-gradient-to-b from-transparent via-gold to-transparent opacity-30 hidden md:block"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 top-4 bottom-4 w-[1px] bg-gold/20 hidden md:block"></div>
+            <motion.div 
+              style={{ scaleY: timelineProgress }}
+              className="absolute left-1/2 -translate-x-1/2 top-4 bottom-4 w-[1px] bg-gold origin-top hidden md:block"
+            />
             
             <div className="space-y-32">
               {timelineItems.map((item, idx) => (
