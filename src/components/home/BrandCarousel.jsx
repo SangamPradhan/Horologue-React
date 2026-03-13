@@ -31,7 +31,7 @@ const BrandCarousel = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-[1440px] mx-auto px-6 relative"
       >
-        <div className="text-center mb-8 md:mb-16">
+        <div className="text-center mb-4 md:mb-8">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const BrandCarousel = () => {
         </div>
 
         {/* 3D Card Stack Container */}
-        <div className="relative h-[400px] md:h-[550px] flex items-center justify-center pt-10 md:pt-20">
+        <div className="relative h-[400px] md:h-[550px] flex items-center justify-center pt-4 md:pt-8">
           <div className="relative w-full flex items-center justify-center">
             {brands.map((brand, idx) => {
               // Exact center calculation to ensure perfect alignment
