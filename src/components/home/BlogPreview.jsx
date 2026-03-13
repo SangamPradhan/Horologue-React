@@ -6,7 +6,13 @@ import { blogPosts } from '@/data/blogs';
 const BlogPreview = () => {
   return (
     <section className="py-24 bg-background-light dark:bg-background-dark">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-[1440px] mx-auto px-6"
+      >
         <div className="flex justify-between items-end mb-16">
           <div>
             <h4 className="text-primary uppercase tracking-[0.2em] font-bold mb-2">The Archive</h4>
@@ -54,7 +60,7 @@ const BlogPreview = () => {
         <button className="sm:hidden w-full mt-12 py-4 border border-primary text-primary font-bold uppercase tracking-widest text-sm rounded transition-all">
           View All Stories
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 };

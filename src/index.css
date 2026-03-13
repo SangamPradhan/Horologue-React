@@ -16,13 +16,14 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(16, 8, 71, 0.03);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -32,8 +33,13 @@ body {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -56,4 +62,27 @@ body {
   pointer-events: none;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
   z-index: 1;
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-slow {
+  animation: scroll-infinite 40s linear infinite;
+}
+
+.velvet-texture {
+  background-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.2) 0%, transparent 100%),
+    url("https://www.transparenttextures.com/patterns/dark-leather.png");
+}
+
+.pause-animation:hover {
+  animation-play-state: paused;
 }

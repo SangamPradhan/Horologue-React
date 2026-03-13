@@ -15,7 +15,13 @@ const PopularItems = () => {
 
   return (
     <section className="py-24 bg-background-light dark:bg-background-dark" ref={ref}>
-      <div className="max-w-[1440px] mx-auto px-6">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-[1440px] mx-auto px-6"
+      >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -93,7 +99,7 @@ const PopularItems = () => {
             Explore the Catalogue
           </Link>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Quick View Modal */}
       {quickView && (

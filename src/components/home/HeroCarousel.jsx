@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const slides = [
@@ -146,7 +146,7 @@ const HeroCarousel = () => {
                 <p className="text-sm md:text-base mb-8 max-w-md leading-relaxed font-light" style={{ color: slide.textColor + 'aa' }}>
                   {slide.subtitle}
                 </p>
-                
+
                 <div className="flex justify-center md:justify-start">
                   <Link
                     to="/shop"
@@ -171,7 +171,7 @@ const HeroCarousel = () => {
                     className="relative w-full h-full flex items-center justify-center"
                   >
                     {/* Shadow Glow */}
-                    <motion.div 
+                    <motion.div
                       className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-12 blur-[80px] rounded-full"
                       style={{ backgroundColor: slide.accent + '33' }}
                       animate={{ opacity: [0.3, 0.6, 0.3] }}
@@ -212,9 +212,9 @@ const HeroCarousel = () => {
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
-      
+
       {/* Scroll Hint */}
-      <motion.div 
+      <motion.div
         animate={{ y: [0, 8, 0], opacity: [0.2, 0.5, 0.2] }}
         transition={{ repeat: Infinity, duration: 3 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3"
