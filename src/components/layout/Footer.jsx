@@ -30,36 +30,35 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-primary">Collections</h4>
+            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-gold">Navigation</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
-              <li><a className="hover:text-gold transition-colors" href="/heritage">Our Heritage</a></li>
-              <li><a className="hover:text-gold transition-colors" href="/shop">Watchmaking</a></li>
-              <li><a className="hover:text-gold transition-colors" href="#">Sustainability</a></li>
-              <li><a className="hover:text-gold transition-colors" href="#">News</a></li>
+              <li><a className="hover:text-gold transition-colors" href="/shop">Collections</a></li>
+              <li><a className="hover:text-gold transition-colors" href="/heritage">The Heritage</a></li>
+              <li><a className="hover:text-gold transition-colors" href="/contact">Contact Us</a></li>
+              <li><a className="hover:text-gold transition-colors" href="#">Journal</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-primary">Concierge</h4>
+            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-gold">Concierge</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
-              <li><a className="hover:text-primary transition-colors" href="#">Valuation Services</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Maintenance & Repair</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Bespoke Ordering</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Global Delivery</a></li>
-              <li><a className="hover:text-primary transition-colors" href="#">Authenticity Check</a></li>
+              <li><a className="hover:text-gold transition-colors" href="#">Technical Service</a></li>
+              <li><a className="hover:text-gold transition-colors" href="#">Bespoke Ordering</a></li>
+              <li><a className="hover:text-gold transition-colors" href="#">Global Delivery</a></li>
+              <li><a className="hover:text-gold transition-colors" href="#">Authenticity Check</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-primary">Newsletter</h4>
+            <h4 className="font-bold text-lg mb-8 tracking-widest uppercase text-gold">Newsletter</h4>
             <p className="text-slate-400 text-sm mb-6">Receive exclusive access to new acquisitions and horological insights.</p>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input 
-                className="bg-white/5 border border-white/10 rounded px-4 py-2 text-sm grow focus:ring-1 focus:ring-primary focus:outline-none" 
+                className="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm grow focus:ring-1 focus:ring-gold focus:border-gold focus:outline-none transition-all" 
                 placeholder="Email Address" 
                 type="email"
               />
-              <button className="bg-primary text-background-dark font-bold px-4 py-2 rounded text-sm hover:brightness-110">JOIN</button>
+              <button className="bg-gold text-background-dark font-black px-6 py-3 rounded-lg text-xs tracking-widest hover:brightness-110 transition-all">JOIN</button>
             </form>
           </div>
         </div>

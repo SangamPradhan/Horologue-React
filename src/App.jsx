@@ -3,9 +3,10 @@ import CartDrawer from './components/cart/CartDrawer';
 import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
 import { CartProvider } from './context/CartContext';
+import Heritage from './pages/Heritage';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import Heritage from './pages/Heritage';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/heritage" element={<Heritage />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
           <Footer />

@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, Globe, Instagram, Mail, MessageCircle, Quote } from 'lucide-react';
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Heritage = () => {
   const containerRef = useRef(null);
@@ -247,13 +248,12 @@ const Heritage = () => {
         <div className="relative z-10">
           <h2 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tighter">Own a Piece of History</h2>
           <p className="max-w-2xl mx-auto mb-12 text-xl font-bold uppercase tracking-widest opacity-80">Discover our Centennial Collection, a tribute to a century of horological innovation.</p>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-background-dark text-gold px-12 py-5 font-black uppercase tracking-[0.3em] text-xs rounded-xl shadow-2xl"
+          <Link 
+            to="/contact"
+            className="inline-block bg-background-dark text-gold px-12 py-5 font-black uppercase tracking-[0.3em] text-xs rounded-xl shadow-2xl hover:scale-105 transition-transform"
           >
             Explore The Collection
-          </motion.button>
+          </Link>
         </div>
       </section>
     </div>

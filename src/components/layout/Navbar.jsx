@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'The Heritage', to: '/heritage' },
   { label: 'Pre-Owned', to: '#' },
   { label: 'Journal', to: '#' },
-  { label: 'Boutiques', to: '#' },
+  { label: 'Contact', to: '/contact' },
 ];
 
 const Navbar = () => {
