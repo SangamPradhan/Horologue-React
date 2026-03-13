@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar';
 import { CartProvider } from './context/CartContext';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Heritage from './pages/Heritage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/heritage" element={<Heritage />} />
             </Routes>
           </main>
           <Footer />
