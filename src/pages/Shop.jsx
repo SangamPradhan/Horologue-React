@@ -188,7 +188,7 @@ const Shop = () => {
                 )}
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 pt-0">
-                <p className="text-gold text-[9px] font-black uppercase tracking-[0.3em] mb-2">{watch.brand}</p>
+                <p className="text-gold text-[9px] font-black uppercase tracking-[0.3em] mb-2">{watch.braxnd}</p>
                 <h2 className="text-2xl font-serif italic text-slate-900 dark:text-primary mb-2 leading-tight drop-shadow-sm">{watch.name}</h2>
                 <p className="text-xl font-black text-slate-900 dark:text-primary tracking-tighter drop-shadow-sm">${watch.price.toLocaleString()}</p>
               </div>

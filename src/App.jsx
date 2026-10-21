@@ -7,11 +7,14 @@ import Heritage from './pages/Heritage';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
     <CartProvider>
       <Router>
+        <ScrollToTop />
         <div className="flex min-h-screen flex-col bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
           <Navbar />
           <CartDrawer />
@@ -21,6 +24,7 @@ function App() {
               <Route path="/shop" element={<Shop />} />
               <Route path="/heritage" element={<Heritage />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
